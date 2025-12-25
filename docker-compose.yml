@@ -1,0 +1,24 @@
+services:
+  # Nuxt 应用服务
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      # 连接到 mongo 服务，注意这里用的是服务名 'mongo' 而不是 localhost
+      - MONGODB_URI=mongodb://mongo:27017/nuxt4-todo
+    depends_on:
+      - mongo
+    restart: always
+
+  # MongoDB 数据库服务
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    restart: always
+
+volumes:
+  mongodb_data:

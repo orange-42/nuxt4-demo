@@ -1,0 +1,24 @@
+{
+    "name": "nuxt4-todo-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "dependencies": {
+        "mongoose": "^9.0.2",
+        "nuxt": "^3.12.0",
+        "pinia": "^2.1.7",
+        "vue": "latest"
+    },
+    "devDependencies": {
+        "@nuxt/icon": "^1.0.0",
+        "@nuxtjs/tailwindcss": "^6.12.0",
+        "@pinia/nuxt": "^0.5.1",
+        "typescript": "latest"
+    }
+}
